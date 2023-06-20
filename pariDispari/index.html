@@ -13,15 +13,14 @@
     <header class="d-flex justify-content-center align-items-center py-5">
         <h1>Pali / Dispali</h1>
     </header>
+
     <main>
         <div class="container w-75">
             <div class="gameContainer d-flex flex-column align-items-center rounded">
-
                 <div class="w-100 userGame d-flex justify-content-around align-items-center py-5">
                     <h2>
                         User:
                     </h2>
-
                     <div class="userGameStats">
                         <label for="oddEvenSel">Seleziona Pari / Dispari</label>
                         <select name="oddEven" id="oddEvenSel">
@@ -30,9 +29,9 @@
                         </select>
 
                         <label for="userNum">Inserire un numero da 1 a 5</label>
-                        <input type="number" name="userNum" id="userNum">
+                        <input type="number" name="userNum" id="userNum" min="1" max="5">
                     </div>
-
+                    <button class = "rounded text-bg-success p-2 border-white">Gioca!</button>
                 </div>
 
                 <hr class = "w-75 rounded">
@@ -47,11 +46,21 @@
                     </div>
                 </div>
 
+                <div class="results">
+                    <p id = "resultsP">
 
+                    </p>
+                </div>
             </div>
+
         </div>
+
+       
+
+
     </main>
 
     <script src = "js/script.js"></script>
+
 </body>
 </html>

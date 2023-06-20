@@ -4,9 +4,43 @@
 // Sommiamo i due numeri
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
+function getRandomNum() {
+    return Math.floor(Math.random() * 5) + 1;
+  }
 
-let selectedValue = document.getElementById("oddEvenSel").value;
-let userInput = document.getElementById("userNum").value;
+function sum(x, y){
+    return x + y;
+}
+
+function checkOddEven(number) {
+    if (number % 2 === 0) {
+        return "Even";
+    } else {
+        return "Odd";
+    }
+}
+
+let selectedValue = document.getElementById("oddEvenSel");
+let userInput = document.getElementById("userNum");
+let cpuOutput = document.getElementById("cpuNum");
+let results = document.getElementById("resultsP");
+let buttonGame = document.querySelector("button");
+
+buttonGame.addEventListener("click", function(){
+    if(userInput.value > 5){
+        alert("Il numero deve essere inferiore o uguale a 5");
+        userInput.value = 0;
+    }
+    
+    cpuOutput.value = getRandomNum();
+    let resultValue = sum(parseInt(userInput.value), parseInt(cpuOutput.value));
+    console.log(resultValue);
+
+});
+
+
+
+
 
 
 
