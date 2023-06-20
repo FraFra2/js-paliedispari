@@ -1,6 +1,13 @@
 
 let userWord = prompt("Prego inserire una stringa");
 
+let myDiv = document.createElement("div");
+let myH1 = document.createElement("h1");
+
+
+myDiv.classList.add("container", "mx-auto", "text-center", "my-5");
+
+
 while(typeof userWord ==! "string" && userWord.length > 1){
     userWord = prompt("La parola inserita non è una stringa. Riprovare");
 }
@@ -16,14 +23,16 @@ function checkPalindrome(word){
     let reversedString = reversedArrayString.join("");
 
     if(word === reversedString){
-        console.log("Stringa Palindroma");
+        myH1.innerHTML = "Stringa Palindroma";
         return true;
     }
     else{
-        console.log("Stringa non Palindroma");
+        myH1.innerHTML = "Stringa non Palindroma";
         return false;
     }
 }
 
 let value = checkPalindrome(userWord);
-console.log(value);
+
+myDiv.append(myH1);
+document.body.append(myDiv);
