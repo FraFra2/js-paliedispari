@@ -14,27 +14,34 @@ function sum(x, y){
 
 function checkOddEven(number) {
     if (number % 2 === 0) {
-        return "Even";
+        return "even";
     } else {
-        return "Odd";
+        return "odd";
     }
 }
 
-let selectedValue = document.getElementById("oddEvenSel");
 let userInput = document.getElementById("userNum");
 let cpuOutput = document.getElementById("cpuNum");
 let results = document.getElementById("resultsP");
 let buttonGame = document.querySelector("button");
 
 buttonGame.addEventListener("click", function(){
+    let selectedValue = document.getElementById("oddEvenSel").value;
     if(userInput.value > 5){
         alert("Il numero deve essere inferiore o uguale a 5");
         userInput.value = 0;
     }
-    
+
     cpuOutput.value = getRandomNum();
     let resultValue = sum(parseInt(userInput.value), parseInt(cpuOutput.value));
-    console.log(resultValue);
+    let resultOutpu = document.querySelector("h3").innerHTML = resultValue;
+    let sumCheck = checkOddEven(resultValue);
+    if(sumCheck == selectedValue){
+        results.innerHTML = "Il giocatore ha vinto."
+    }
+    else{
+        results.innerHTML = "Il giocatore ha perso."
+    }
 
 });
 
