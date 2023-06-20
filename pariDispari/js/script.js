@@ -31,7 +31,6 @@ buttonGame.addEventListener("click", function(){
         alert("Il numero deve essere inferiore o uguale a 5");
         userInput.value = 0;
     }
-
     cpuOutput.value = getRandomNum();
     let resultValue = sum(parseInt(userInput.value), parseInt(cpuOutput.value));
     let resultOutpu = document.querySelector("h3").innerHTML = resultValue;
@@ -42,7 +41,6 @@ buttonGame.addEventListener("click", function(){
     else{
         results.innerHTML = "Il giocatore ha perso."
     }
-
 });
 
 
