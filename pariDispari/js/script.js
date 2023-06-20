@@ -5,3 +5,8 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
+let selectedValue = document.getElementById("oddEvenSel").value;
+let userInput = document.getElementById("userNum").value;
+
+
+

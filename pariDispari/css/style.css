@@ -5,3 +5,13 @@ hr{
     border: 5px white solid !important;
     opacity: 1 !important;
 }
+
+label{
+    padding: 0 1rem;
+
+}
+
+input, select{
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
